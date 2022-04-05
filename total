@@ -1,0 +1,7 @@
+  $total = "SELECT  SUM(p_price) from orderlist";
+  $total2 = $link->query($total);
+  //display data on web page
+  while($row = mysqli_fetch_array($total2)){
+      echo " Total weight: ". $row['SUM(p_price)'];
+      echo "<br>";
+  }
